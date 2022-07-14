@@ -30,7 +30,7 @@
         <div class="blog-container">
             <div class="blog-box">
                 <div class="blog-boxes">
-                    <img src="./img/post_img_1.png" alt="">
+                    <img src="<?php echo get_template_directory_uri();?>/img/post_img_1.png" alt="">
                     <div class="blog-boxes-p">
                         <p class="day">2018 / 5 / 20</p>
                         <p class="text">おしゃれなカフェありますよ</p>
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="blog-boxes">
-                    <img src="./img/post_img_2.png" alt="">
+                    <img src="<?php echo get_template_directory_uri();?>/img/post_img_2.png" alt="">
                     <div class="blog-boxes-p">
                         <p class="day">2018 / 5 / 19</p>
                         <p class="text">あのネオンはいつ交換するのか！？観覧車の謎に迫る！</p>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="blog-boxes">
-                    <img src="./img/post_img_3.png" alt="">
+                    <img src="<?php echo get_template_directory_uri();?>/img/post_img_3.png" alt="">
                     <div class="blog-boxes-p">
                         <p class="day">2018 / 5 / 18</p>
                         <p class="text">ラソナの社内はこんなのよ</p>
@@ -57,7 +57,7 @@
             </div>
             <div class="blog-box">
                 <div class="blog-boxes">
-                    <img src="./img/post_img_4.png" alt="">
+                    <img src="<?php echo get_template_directory_uri();?>/img/post_img_4.png" alt="">
                     <div class="blog-boxes-p">
                         <p class="day">2018 / 5 / 27</p>
                         <p class="text">お隣のアラハはハワイ？</p>
@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div class="blog-boxes">
-                    <img src="./img/post_img_5.png" alt="">
+                    <img src="<?php echo get_template_directory_uri();?>/img/post_img_5.png" alt="">
                     <div class="blog-boxes-p">
                         <p class="day">2018 / 5 / 16</p>
                         <p class="text">なぜテント？ラソナの人に聞いてみた</p>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="blog-boxes">
-                    <img src="./img/post_img_6.png" alt="">
+                    <img src="<?php echo get_template_directory_uri();?>/img/post_img_6.png" alt="">
                     <div class="blog-boxes-p">
                         <p class="day">2018 / 5 / 15</p>
                         <p class="text">ベイエリアおしゃれすぎる問題</p>
@@ -85,4 +85,5 @@
 
     </section>
 </main>
+<?php get_footer(); ?>
 
