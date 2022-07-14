@@ -1,0 +1,100 @@
+header {
+  height: 120px;
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header input {
+  display: none;
+}
+
+#kv {
+  border: solid 1px black;
+  position: relative;
+}
+
+#kv .kv-logo {
+  position: absolute;
+  top: -110px;
+  left: 10px;
+  z-index: 2;
+}
+
+#kv h3 {
+  margin-left: 20px;
+  position: relative;
+}
+
+.header-right ul {
+  display: flex;
+  list-style: none;
+}
+
+.header-right li {
+  margin-right: 20px;
+}
+
+.kv-container {
+  text-align: center;
+  border: solid 1px gold;
+  position: relative;
+}
+
+.kv-container .kv-slide {
+  text-align: center;
+}
+
+.kv-container .kv-text {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 235px;
+  left: 325px;
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    width: 100%;
+  }
+  header {
+    height: 0px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .header-right {
+    position: fixed;
+    top: 85px;
+    right: -200px;
+    transition: right 1s ease;
+  }
+  .header-right ul {
+    display: block;
+  }
+  #kv {
+    text-align: center;
+  }
+  #kv .kv-logo {
+    position: static;
+    width: 30%;
+  }
+  #kv h3 span {
+    display: block;
+  }
+  .kv-container {
+    position: static;
+  }
+  .kv-container .kv-text {
+    border: solid 1px gold;
+    position: static;
+    background-color: gray;
+    position: absolute;
+    width: 70%;
+    height: auto;
+    top: 270px;
+    left: 0px;
+  }
+}
+/*# sourceMappingURL=toshi.css.map */
