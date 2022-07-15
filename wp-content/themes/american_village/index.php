@@ -24,7 +24,7 @@
     </section>
 
 
-    
+    <!-- メインループの記載 -->
     <?php 
     if(have_posts()):
       while (have_posts()):
@@ -34,66 +34,67 @@
         <h1>Latest Articles</h1>
         <div class="blog-container">
             <div class="blog-box">
-                <div class="blog-boxes">
-                    <img src="<?php echo get_template_directory_uri();?>/img/post_img_1.png" alt="">
+                <a href="<?php the_permalink(); ?>" class="blog-boxes">
+                    <?php the_post_thumbnail(); ?>
+                    <!-- <img src="<?php //echo get_template_directory_uri();?>/img/post_img_1.png" alt=""> -->
                     <div class="blog-boxes-p">
-                        <p class="day">2018 / 5 / 20</p>
-                        <p class="text">おしゃれなカフェありますよ</p>
-                        <h2>READ MORE</h2>
-                        <span></span>
+                        <p class="day"><?php echo get_the_date(); ?></p>
+                        <h2 class="title"><?php the_title(); ?></h2>
+                        <p class="description"><?php the_content(); ?></p>
+                        <p class="more" ><?php the_content( 'READ MORE' ); ?></p>
                     </div>
-                </div>
-                <div class="blog-boxes">
-                    <img src="<?php echo get_template_directory_uri();?>/img/post_img_2.png" alt="">
+                </a>
+                <!-- <div class="blog-boxes">
+                    <img src="<?php //echo get_template_directory_uri();?>/img/post_img_2.png" alt="">
                     <div class="blog-boxes-p">
                         <p class="day">2018 / 5 / 19</p>
-                        <p class="text">あのネオンはいつ交換するのか！？観覧車の謎に迫る！</p>
-                        <h2>READ MORE</h2>
+                        <h2 class="title">あのネオンはいつ交換するのか！？観覧車の謎に迫る！</h2>
+                        <p class="more" >READ MORE</p>
                     </div>
                 </div>
                 <div class="blog-boxes">
-                    <img src="<?php echo get_template_directory_uri();?>/img/post_img_3.png" alt="">
+                    <img src="<?php //echo get_template_directory_uri();?>/img/post_img_3.png" alt="">
                     <div class="blog-boxes-p">
                         <p class="day">2018 / 5 / 18</p>
-                        <p class="text">ラソナの社内はこんなのよ</p>
-                        <h2>READ MORE</h2>
+                        <h2 class="title">ラソナの社内はこんなのよ</h2>
+                        <p class="more" >READ MORE</p>
                     </div>
                 </div>
             </div>
             <div class="blog-box">
                 <div class="blog-boxes">
-                    <img src="<?php echo get_template_directory_uri();?>/img/post_img_4.png" alt="">
+                    <img src="<?php //echo get_template_directory_uri();?>/img/post_img_4.png" alt="">
                     <div class="blog-boxes-p">
                         <p class="day">2018 / 5 / 27</p>
-                        <p class="text">お隣のアラハはハワイ？</p>
-                        <h2>READ MORE</h2>
+                        <h2 class="title">お隣のアラハはハワイ？</h2>
+                        <p class="more" >READ MORE</p>
                     </div>
                 </div>
                 <div class="blog-boxes">
-                    <img src="<?php echo get_template_directory_uri();?>/img/post_img_5.png" alt="">
+                    <img src="<?php //echo get_template_directory_uri();?>/img/post_img_5.png" alt="">
                     <div class="blog-boxes-p">
                         <p class="day">2018 / 5 / 16</p>
-                        <p class="text">なぜテント？ラソナの人に聞いてみた</p>
-                        <h2>READ MORE</h2>
+                        <h2 class="title">なぜテント？ラソナの人に聞いてみた</h2>
+                        <p class="more" >READ MORE</p>
                     </div>
                 </div>
                 <div class="blog-boxes">
-                    <img src="<?php echo get_template_directory_uri();?>/img/post_img_6.png" alt="">
+                    <img src="<?php //echo get_template_directory_uri();?>/img/post_img_6.png" alt="">
                     <div class="blog-boxes-p">
                         <p class="day">2018 / 5 / 15</p>
-                        <p class="text">ベイエリアおしゃれすぎる問題</p>
-                        <h2>READ MORE</h2>
+                        <h2 class="title">ベイエリアおしゃれすぎる問題</h2>
+                        <p class="more" >READ MORE</p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
     </section>
     <?php endwhile;
     else : ?>
-    <!-- <section class="container-wrap" id="htmlcss">
+    <section class="blog-boxes">
       <h2 class="subtitle">表示する記事がありません</h2>
-    </section> -->
+    </section>
     <?php endif; ?>
 </main>
 <?php get_footer(); ?>

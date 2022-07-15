@@ -1,4 +1,4 @@
 <?php 
-//投稿ページにサムネイルを追加する方法
+//投稿ページにサムネイルを追加
 add_theme_support('post-thumbnails');
 ?>

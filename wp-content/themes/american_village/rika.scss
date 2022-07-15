@@ -53,7 +53,7 @@ h1{
         }
 
         &-boxes{
-            // border: 1px solid black;
+            border: 1px solid black;
             width: 320px;
             margin-bottom: 30px;
 
@@ -68,6 +68,10 @@ h1{
                 height: 200px;
                 position: relative;
 
+                .title{
+                  font-size: 16px;
+                }
+
                 @media screen and (max-width: 767px){
                     padding: 0px 45px;
                 }
@@ -79,11 +83,11 @@ h1{
                 
             }
 
-            h2{
+            .more{
                 right: 17px;
                 position: absolute;
                 font-size: 13px;
-                bottom: 30px;
+                bottom: 15px;
                 
 
                 @media screen and (max-width: 767px){
@@ -94,7 +98,7 @@ h1{
 
 
              
-            h2::after{
+            .more::after{
                 content: "";
                 display: block;
                 width: 20px;
@@ -111,7 +115,7 @@ h1{
             top:-3px;
             box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
 
-            h2::after{
+            .more::after{
                 width: 80px;
                 // right: 20px;
             }
