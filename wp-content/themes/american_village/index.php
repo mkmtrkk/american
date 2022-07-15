@@ -2,19 +2,19 @@
 
 <main>
     <section id="kv">
-        <img class="kv-logo" src="./img/logo.png" alt="logo">
+        <img class="kv-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo">
         <div class="kv-container">
 
             <picture class="kv-slide">
-                <source srcset="img/visual_1_pc.png" media="(min-width: 768px)" /><!-- ○○px以上で表示する画像 -->
-                <source srcset="./img/visual_1_sp.png" media="(min-width: 10px)" /><!-- △△px以上で表示する画像 -->
-                <img src="./img/visual_1_sp.png" alt="view"/>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/img/visual_1_pc.png" media="(min-width: 768px)" /><!-- ○○px以上で表示する画像 -->
+                <source srcset="<?php echo get_template_directory_uri(); ?>/img/visual_1_sp.png" media="(min-width: 10px)" /><!-- △△px以上で表示する画像 -->
+                <img src="<?php echo get_template_directory_uri(); ?>/img/visual_1_sp.png" alt="view"/>
             </picture>
 
             <picture class="kv-text">
-                <source class="kv-text-pc" srcset="./img/visual_text_pc.png" media="(min-width: 768px)" /><!-- ○○px以上で表示する画像 -->
-                <source class="kv-text-sp" srcset="./img/visual_text_sp.png" media="(min-width: 10px)" /><!-- △△px以上で表示する画像 -->
-                <img class="kv-text-sp" src="./img/visual_text_sp.png" alt="view"/>
+                <source class="kv-text-pc" srcset="<?php echo get_template_directory_uri(); ?>/img/visual_text_pc.png" media="(min-width: 768px)" /><!-- ○○px以上で表示する画像 -->
+                <source class="kv-text-sp" srcset="<?php echo get_template_directory_uri(); ?>/img/visual_text_sp.png" media="(min-width: 10px)" /><!-- △△px以上で表示する画像 -->
+                <img class="kv-text-sp" src="<?php echo get_template_directory_uri(); ?>/img/visual_text_sp.png" alt="view"/>
             </picture>
         </div>    
     <h3>
