@@ -38,6 +38,8 @@ h1 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 100px;
+  flex-flow: row-reverse;
+  flex-wrap: wrap-reverse;
 }
 
 @media screen and (max-width: 767px) {
@@ -49,7 +51,6 @@ h1 {
 }
 
 #blog .blog-boxes {
-  border: 1px solid black;
   width: 320px;
   margin-bottom: 30px;
 }

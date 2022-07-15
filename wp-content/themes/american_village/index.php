@@ -23,17 +23,31 @@
 
     </section>
 
-
+    
     <!-- メインループの記載 -->
-    <?php 
-    if(have_posts()):
-      while (have_posts()):
-        the_post();
-    ?>
-    <section id="blog">
+     <section id="blog">
         <h1>Latest Articles</h1>
         <div class="blog-container">
             <div class="blog-box">
+                
+            <?php   
+            // サブクエリをセット
+            $args = array(
+                'post_type' => 'post',  // 投稿タイプ
+                                        // ・投稿        ：post  
+                                        // ・固定ページ  ：page 
+                                        // ・カスタム投稿：カスタム投稿タイプ名
+                'posts_per_page' => 6, // 表示件数。 -1ならすべての投稿を取得
+                'orderby' => 'date',    // ソート
+                                        // ・date  ：日付
+                                        // ・rand  ：ランダム
+                'order' => 'DESC');    // 降順(日付の場合、日付が新しい順)
+            
+            $loop = new WP_Query($args);  
+            if(have_posts()):
+                while (have_posts()):
+                  the_post();
+              ?>
                 <a href="<?php the_permalink(); ?>" class="blog-boxes">
                     <?php the_post_thumbnail(); ?>
                     <!-- <img src="<?php //echo get_template_directory_uri();?>/img/post_img_1.png" alt=""> -->
@@ -41,9 +55,15 @@
                         <p class="day"><?php echo get_the_date(); ?></p>
                         <h2 class="title"><?php the_title(); ?></h2>
                         <p class="description"><?php the_content(); ?></p>
-                        <p class="more" ><?php the_content( 'READ MORE' ); ?></p>
+                        <p class="more" >READ MORE</p>
                     </div>
                 </a>
+                <?php endwhile;
+                    else : ?>
+                    <section class="blog-boxes">
+                    <h2 class="subtitle">表示する記事がありません</h2>
+                    </section>
+                <?php endif; ?>    
                 <!-- <div class="blog-boxes">
                     <img src="<?php //echo get_template_directory_uri();?>/img/post_img_2.png" alt="">
                     <div class="blog-boxes-p">
@@ -90,12 +110,7 @@
         </div>
 
     </section>
-    <?php endwhile;
-    else : ?>
-    <section class="blog-boxes">
-      <h2 class="subtitle">表示する記事がありません</h2>
-    </section>
-    <?php endif; ?>
+    
 </main>
 <?php get_footer(); ?>
 
