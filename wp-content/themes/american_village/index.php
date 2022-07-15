@@ -25,7 +25,11 @@
 
 
     
-
+    <?php 
+    if(have_posts()):
+      while (have_posts()):
+        the_post();
+    ?>
     <section id="blog">
         <h1>Latest Articles</h1>
         <div class="blog-container">
@@ -85,6 +89,12 @@
         </div>
 
     </section>
+    <?php endwhile;
+    else : ?>
+    <!-- <section class="container-wrap" id="htmlcss">
+      <h2 class="subtitle">表示する記事がありません</h2>
+    </section> -->
+    <?php endif; ?>
 </main>
 <?php get_footer(); ?>
 
