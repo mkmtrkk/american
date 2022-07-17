@@ -1,7 +1,7 @@
 header {
-  height: 120px;
+  height: 260px;
   background-color: white;
-  padding: 10px 20px;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +12,6 @@ header input {
 }
 
 #kv {
-  border: solid 1px black;
   position: relative;
 }
 
@@ -39,7 +38,6 @@ header input {
 
 .kv-container {
   text-align: center;
-  border: solid 1px gold;
   position: relative;
 }
 
@@ -50,9 +48,9 @@ header input {
 .kv-container .kv-text {
   position: absolute;
   height: 100%;
-  width: 100%;
-  top: 235px;
-  left: 325px;
+  width: 50%;
+  top: 40%;
+  left: 50%;
 }
 
 @media screen and (max-width: 767px) {
@@ -87,14 +85,12 @@ header input {
     position: static;
   }
   .kv-container .kv-text {
-    border: solid 1px gold;
     position: static;
-    background-color: gray;
     position: absolute;
     width: 70%;
     height: auto;
-    top: 270px;
-    left: 0px;
+    top: 35%;
+    left: 0%;
   }
 }
 /*# sourceMappingURL=toshi.css.map */

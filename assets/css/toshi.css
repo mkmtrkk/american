@@ -1,7 +1,7 @@
 header {
   height: 120px;
   background-color: white;
-  padding: 10px 20px;
+  padding: 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,7 +85,6 @@ header input {
     position: static;
   }
   .kv-container .kv-text {
-    border: solid 1px gold;
     position: static;
     background-color: gray;
     position: absolute;

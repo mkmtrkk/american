@@ -1,8 +1,8 @@
 
 header{
-  height: 120px;
+  height: 260px;
   background-color: white;
-  padding: 10px 20px;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,7 +13,6 @@ header{
 }
 
 #kv{
-  // border: solid 1px black;
   position: relative;
 
   .kv-logo{
@@ -26,8 +25,6 @@ header{
   h3{
     margin-left: 20px;
     position: relative;
-
-
   }
 }
 
@@ -53,10 +50,9 @@ header{
   .kv-text{
       position: absolute;
       height: 100%;
-      width: 100%;
-      top: 235px;
-      left: 325px;
-      // border: solid 1px gold;  
+      width: 50%;
+      top: 40%;
+      left: 50%;
   }
 }
 
@@ -104,24 +100,15 @@ header{
     position: static;
 
     .kv-text{
-      border: solid 1px gold;
       position: static;
-      background-color: gray;
    
        position: absolute;
        width: 70%;
        height: auto;
        top: 35%;
        left: 0%;
-       // border: solid 1px gold;  
      }
   }
-
-
-
-
-
-
 
   // レスポンシブの大外
 }
