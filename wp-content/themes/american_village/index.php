@@ -32,18 +32,18 @@
                 
             <?php   
             // サブクエリをセット
-            $args = array(
-                'post_type' => 'post',  // 投稿タイプ
-                                        // ・投稿        ：post  
-                                        // ・固定ページ  ：page 
-                                        // ・カスタム投稿：カスタム投稿タイプ名
-                'posts_per_page' => 6, // 表示件数。 -1ならすべての投稿を取得
-                'orderby' => 'date',    // ソート
-                                        // ・date  ：日付
-                                        // ・rand  ：ランダム
-                'order' => 'DESC');    // 降順(日付の場合、日付が新しい順)
+            // $args = array(
+            //     'post_type' => 'post',  // 投稿タイプ
+            //                             // ・投稿        ：post  
+            //                             // ・固定ページ  ：page 
+            //                             // ・カスタム投稿：カスタム投稿タイプ名
+            //     'posts_per_page' => 6, // 表示件数。 -1ならすべての投稿を取得
+            //     'orderby' => 'date',    // ソート
+            //                             // ・date  ：日付
+            //                             // ・rand  ：ランダム
+            //     'order' => 'DESC');    // 降順(日付の場合、日付が新しい順)
             
-            $loop = new WP_Query($args);  
+            // $loop = new WP_Query($args);  
             if(have_posts()):
                 while (have_posts()):
                   the_post();
