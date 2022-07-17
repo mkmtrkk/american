@@ -1,5 +1,6 @@
 body{
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  background-color: white;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 }
 
 main{
@@ -44,8 +45,9 @@ h1{
             display: flex;
             justify-content: space-between;
             margin-bottom: 100px;
-            flex-flow: row-reverse;
-            flex-wrap: wrap-reverse;
+            // flex-flow: row-reverse;
+            // flex-wrap: wrap-reverse;
+            flex-flow: row wrap;
 
 
             @media screen and (max-width: 767px){
@@ -108,7 +110,7 @@ h1{
                 height: 2px;
                 background-color: black;
                 position: absolute;
-                bottom: -10px;
+                bottom: -5px;
                 right: 0px;
                 transition: 0.5s;
             }
