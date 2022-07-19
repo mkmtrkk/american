@@ -10,6 +10,18 @@ header{
   input{
     display: none;
   }
+
+  ul{
+    display: flex;
+    list-style: none;
+    position: relative;
+    top: 85px;
+    right: -200px;
+  }
+
+  li{
+    margin-right: 20px; 
+  }
 }
 
 #kv{
@@ -28,16 +40,16 @@ header{
   }
 }
 
-.header-right{
-  ul{
-    display: flex;
-    list-style: none;
-  }
+// .header-right{
+//   ul{
+//     display: flex;
+//     list-style: none;
+//   }
 
-  li{
-    margin-right: 20px; 
-  }
-}
+//   li{
+//     margin-right: 20px; 
+//   }
+// }
 
 .kv-container{
   text-align: center;
@@ -63,22 +75,18 @@ header{
   }
 
   header{
-    height: 0px;
-    overflow: hidden;
-    // position: fixed;
+    // height: 0px;
+    // overflow: hidden;
     width: 100%;
-  }
-
-  .header-right{
-    position: fixed;
-    top: 85px;
-    right: -200px;
+    position: absolute;
     transition: right 1s ease;
 
     ul{
       display: block;
+      background-color: aqua;
     }
   }
+
 
   #kv{
     // margin-top: 30px;

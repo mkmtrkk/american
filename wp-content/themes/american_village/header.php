@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/reset.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/style.css">
-    <link rel="stylesheet" href="./assets/css/rika.css">
-    <link rel="stylesheet" href="./assets/css/toshi.css">
+    <link rel="stylesheet" href="/american/assets/css/rika.css">
+    <link rel="stylesheet" href="/american/assets/css/toshi.css">
     
     <title>American_village</title>
 </head>
@@ -15,23 +15,18 @@
 
 <header class=".header">
      <!-- ヘッダーライト -->
-        <div class="header-right">
+        <!-- <div class="header-right"> -->
                 <p id="hamburger-btn" class="hamburger">
                     <span></span>
                 </p>
-                <nav>
+                
                     <ul>
                         <li><a href="">Menu01</a></li>
                         <li><a href="">Menu02</a></li>
                         <li><a href="">Menu03</a></li>
                         <li><a href="">Menu04</a></li>
                     </ul>
-                </nav>  
+                
         
-        </div>
-     <!-- ハンバーガーメニュー -->
-     <!-- <input type="checkbox" id="hamburger">
-     <label for="hamburger" class="hamburger">
-       <span class="pate"></span>
-     </label> -->
+        <!-- </div> -->
 </header>
