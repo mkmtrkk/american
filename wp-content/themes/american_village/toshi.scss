@@ -1,116 +1,104 @@
-
-header{
-  height: 160px;
+header {
+  height: 260px;
   background-color: white;
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
-  justify-content: flex-end;
   align-items: center;
-
-  input{
+  input {
     display: none;
   }
+  ul {
+    display: flex;
+    list-style: none;
+    position: relative;
+    top: 85px;
+  }
+  li {
+    margin-right: 20px;
+  }
 }
-
-#kv{
+#kv {
   position: relative;
-
-  .kv-logo{
+  .kv-logo {
     position: absolute;
     top: -110px;
     left: 10px;
     z-index: 2;
   }
-
-  h3{
+  h3 {
     margin-left: 20px;
     position: relative;
   }
 }
-
-.header-right{
-  ul{
-    display: flex;
-    list-style: none;
-  }
-
-  li{
-    margin-right: 20px; 
-  }
-}
-
-.kv-container{
+// .header-right{
+//   ul{
+//     display: flex;
+//     list-style: none;
+//   }
+//   li{
+//     margin-right: 20px;
+//   }
+// }
+.kv-container {
   text-align: center;
   position: relative;
-
-  .kv-slide{
+  .kv-slide {
     text-align: center;
   }
-
-  .kv-text{
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      top: 235px;
-      left: 325px;
+  .kv-text {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 40%;
+    left: 50%;
   }
 }
-
 // レスポンシブ対応
 @media screen and (max-width: 767px) {
-  main{
+  main {
     width: 100%;
   }
-
-  header{
-    height: 0px;
-    overflow: hidden;
-    // position: fixed;
+  header {
+    // height: 0px;
+    // overflow: hidden;
     width: 100%;
-  }
-
-  .header-right{
-    position: fixed;
-    top: 85px;
-    right: -200px;
+    position: absolute;
     transition: right 1s ease;
-
-    ul{
+    ul {
       display: block;
+      background-color: aqua;
     }
   }
-
-  #kv{
+  #kv {
     // margin-top: 30px;
     text-align: center;
-
-    .kv-logo{
+    .kv-logo {
       position: static;
       width: 30%;
     }
-
-    h3{
-      span{
+    h3 {
+      span {
         display: block;
       }
     }
   }
-
-  .kv-container{
+  .kv-container {
     position: static;
-
-    .kv-text{
+    .kv-text {
       position: static;
-   
-       position: absolute;
-       width: 70%;
-       height: auto;
-       top: 35%;
-       left: 0%;
-     }
+      position: absolute;
+      width: 70%;
+      height: auto;
+      top: 35%;
+      left: 0%;
+    }
   }
-
   // レスポンシブの大外
 }
+
+
+
+
+
 

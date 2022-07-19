@@ -1,15 +1,25 @@
 header {
-  height: 160px;
+  height: 260px;
   background-color: white;
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
-  justify-content: flex-end;
   align-items: center;
 }
 
 header input {
   display: none;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  position: relative;
+  top: 85px;
+}
+
+header li {
+  margin-right: 20px;
 }
 
 #kv {
@@ -28,15 +38,6 @@ header input {
   position: relative;
 }
 
-.header-right ul {
-  display: flex;
-  list-style: none;
-}
-
-.header-right li {
-  margin-right: 20px;
-}
-
 .kv-container {
   text-align: center;
   position: relative;
@@ -49,9 +50,9 @@ header input {
 .kv-container .kv-text {
   position: absolute;
   height: 100%;
-  width: 100%;
-  top: 235px;
-  left: 325px;
+  width: 50%;
+  top: 40%;
+  left: 50%;
 }
 
 @media screen and (max-width: 767px) {
@@ -59,18 +60,13 @@ header input {
     width: 100%;
   }
   header {
-    height: 0px;
-    overflow: hidden;
     width: 100%;
-  }
-  .header-right {
-    position: fixed;
-    top: 85px;
-    right: -200px;
+    position: absolute;
     transition: right 1s ease;
   }
-  .header-right ul {
+  header ul {
     display: block;
+    background-color: aqua;
   }
   #kv {
     text-align: center;
