@@ -29,83 +29,45 @@
         <h1>Latest Articles</h1>
         <div class="blog-container" id="content">
             <div class="blog-box">
-            <?php   
-            // サブクエリをセット
-            // $args = array(
-            //     'post_type' => 'post',  // 投稿タイプ
-            //                             // ・投稿        ：post  
-            //                             // ・固定ページ  ：page 
-            //                             // ・カスタム投稿：カスタム投稿タイプ名
-            //     'posts_per_page' => 6, // 表示件数。 -1ならすべての投稿を取得
-            //     'orderby' => 'date',    // ソート
-            //                             // ・date  ：日付
-            //                             // ・rand  ：ランダム
-            //     'order' => 'DESC');    // 降順(日付の場合、日付が新しい順)
-            
-            // $loop = new WP_Query($args);  
-            
-            if(have_posts()):
-                while (have_posts()):
-                  the_post();
+                <?php 
+                $wp_query = new WP_Query(
+                    array(
+                        'post_type' => 'news'
+                    )
+                );
+                ?>
+            <?php    
+            if($wp_query->have_posts()):
+                while ($wp_query->have_posts()):
+                    $wp_query->the_post();
               ?>
                 <a href="<?php the_permalink(); ?>" class="blog-boxes" >
                     <?php the_post_thumbnail(); ?>
                     <!-- <img src="<?php //echo get_template_directory_uri();?>/img/post_img_1.png" alt=""> -->
                     <div class="blog-boxes-p">
                         <p class="day"><?php echo get_the_date(); ?></p>
-                        <h2 class="title"><?php the_title(); ?></h2>
+                        <!-- <h2 class="title"><?php //the_title(); ?></h2> -->
                         <p class="description"><?php the_content(); ?></p>
-                        <p class="more" >READ MORE</p>
+                        <p class="more">READ MORE</p>
                     </div>
                 </a>
-                <?php endwhile;
-                    else : ?>
-                    <section class="blog-boxes">
-                    <h2 class="subtitle">表示する記事がありません</h2>
-                    </section>
+
+                
+                <?php endwhile;?>
+                    <!-- カスタム投稿全件数取得 -->
+                    <?php global $wp_query; $count = $wp_query->found_posts;?>
+
+                    <!-- この部分がajaxで追加読み込みする箇所 -->
+                    <!-- javascript側に渡したい値は、data属性を使って指定 -->
+                    <ul class="load" data-count="<?php echo $count; ?>"
+                    data-post-type="news" ></ul>
+
+                    <!-- 初期表示件数が全件数より少ない場合、もっと読み込むボタンを表示 -->
+                    <?php if($count > 6): ?>
+                    <button class="more_btn">もっと読み込む</button>
+                    <?php endif; ?>
                 <?php endif;?>    
-                <!-- <div class="blog-boxes">
-                    <img src="<?php //echo get_template_directory_uri();?>/img/post_img_2.png" alt="">
-                    <div class="blog-boxes-p">
-                        <p class="day">2018 / 5 / 19</p>
-                        <h2 class="title">あのネオンはいつ交換するのか！？観覧車の謎に迫る！</h2>
-                        <p class="more" >READ MORE</p>
-                    </div>
-                </div>
-                <div class="blog-boxes">
-                    <img src="<?php //echo get_template_directory_uri();?>/img/post_img_3.png" alt="">
-                    <div class="blog-boxes-p">
-                        <p class="day">2018 / 5 / 18</p>
-                        <h2 class="title">ラソナの社内はこんなのよ</h2>
-                        <p class="more" >READ MORE</p>
-                    </div>
-                </div>
-            </div>
-            <div class="blog-box">
-                <div class="blog-boxes">
-                    <img src="<?php //echo get_template_directory_uri();?>/img/post_img_4.png" alt="">
-                    <div class="blog-boxes-p">
-                        <p class="day">2018 / 5 / 27</p>
-                        <h2 class="title">お隣のアラハはハワイ？</h2>
-                        <p class="more" >READ MORE</p>
-                    </div>
-                </div>
-                <div class="blog-boxes">
-                    <img src="<?php //echo get_template_directory_uri();?>/img/post_img_5.png" alt="">
-                    <div class="blog-boxes-p">
-                        <p class="day">2018 / 5 / 16</p>
-                        <h2 class="title">なぜテント？ラソナの人に聞いてみた</h2>
-                        <p class="more" >READ MORE</p>
-                    </div>
-                </div>
-                <div class="blog-boxes">
-                    <img src="<?php //echo get_template_directory_uri();?>/img/post_img_6.png" alt="">
-                    <div class="blog-boxes-p">
-                        <p class="day">2018 / 5 / 15</p>
-                        <h2 class="title">ベイエリアおしゃれすぎる問題</h2>
-                        <p class="more" >READ MORE</p>
-                    </div>
-                </div> -->
+                
             </div>
         </div>
 
