@@ -19,128 +19,128 @@ body {
     z-index: 2;
   }
 
-    .hamburger {
-      @include sp-screen {
-        position: relative;
-        // z-index: 3;
-        // right: 20px;
-        width: 28px;
-        height: 30px;
-        margin: 30px auto 10px;
-        margin-right: 10px;
-        margin-left: auto;
-      }
-    }
-
-    
-      .hamburger span:after,
-      .hamburger span:before {
-        @include sp-screen {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: -9px;
-        }
-      }
-
-      .hamburger span:after {
-        top: 9px;
-      }
-
-      .hamburger span {
-        position: relative;
-        display: block;
-        top: 15px;
-      }
-
-      .hamburger span,
-      .hamburger span:after,
-      .hamburger span:before {
-        width: 100%;
-        height: 5px;
-        background-color: red;
-        transition: all 0.5s;
-        /*←アニメーション*/
-        backface-visibility: hidden;
-        border-radius: 2px;
-      }
-
-      .hamburger.on span {
-        background-color: transparent;
-      }
-
-      .hamburger.on span:before {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-
-      .hamburger.on span:after {
-        transform: rotate(-45deg) translate(7px, -8px);
-      }
-    }
-  
-
-
-  // nav{
-  //   @include sp-screen{
-  //     overflow: hidden;
-  //     width: 100%;
-  //     height: 555px;
-  //     position: relative;
-  //   }
-  // }
-
-  ul {
-    display: flex;
-    justify-content: flex-end;
-
-
-    li {
-      @include sp-screen {
-        color: white;
-        font-size: 12px;
-        line-height: 0;
-        padding: 18px 20px;
-      }
-    }
-
+  .hamburger {
     @include sp-screen {
-      display: block;
-      background-color: #173d7e;
-      width: 28%;
-      text-align: center;
-      padding: 150px 0;
-      position: absolute;
-      right: -222px;
-      // position: fixed;
-      z-index: 2;
-
-      &.hide {
-        z-index: 2;
-        right: 0;
-
-      }
-
-      // transform: translateX(0);
-      transition: all 1s ease;
+      position: relative;
+      // z-index: 3;
+      // right: 20px;
+      width: 28px;
+      height: 30px;
+      margin: 30px auto 10px;
+      margin-right: 10px;
+      margin-left: auto;
     }
   }
+
+
+  .hamburger span:after,
+  .hamburger span:before {
+    @include sp-screen {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -9px;
+    }
+  }
+
+  .hamburger span:after {
+    top: 9px;
+  }
+
+  .hamburger span {
+    position: relative;
+    display: block;
+    top: 15px;
+  }
+
+  .hamburger span,
+  .hamburger span:after,
+  .hamburger span:before {
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    transition: all 0.5s;
+    /*←アニメーション*/
+    backface-visibility: hidden;
+    border-radius: 2px;
+  }
+
+  .hamburger.on span {
+    background-color: transparent;
+  }
+
+  .hamburger.on span:before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.on span:after {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+}
+
+
+
+// nav{
+//   @include sp-screen{
+//     overflow: hidden;
+//     width: 100%;
+//     height: 555px;
+//     position: relative;
+//   }
+// }
+
+ul {
+  display: flex;
+  justify-content: flex-end;
 
 
   li {
-    padding: 10px 20px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 31px;
-    line-height: 63px;
-    color: #000000;
-
     @include sp-screen {
-      padding: 0;
+      color: white;
+      font-size: 12px;
+      line-height: 0;
+      padding: 18px 20px;
+    }
+  }
+
+  @include sp-screen {
+    display: block;
+    background-color: #173d7e;
+    width: 28%;
+    text-align: center;
+    padding: 150px 0;
+    position: absolute;
+    right: -222px;
+    // position: fixed;
+    z-index: 2;
+
+    &.hide {
+      z-index: 2;
+      right: 0;
+
     }
 
+    // transform: translateX(0);
+    transition: all 1s ease;
+  }
+}
+
+
+li {
+  padding: 10px 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 63px;
+  color: #000000;
+
+  @include sp-screen {
+    padding: 0;
   }
 
 }
+
+
 
 
 main {
@@ -181,11 +181,10 @@ h1 {
 
     &-box {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       margin-bottom: 100px;
-      // flex-flow: row-reverse;
-      // flex-wrap: wrap-reverse;
       flex-flow: row wrap;
+      gap: 30px;
 
 
       @media screen and (max-width: 767px) {
@@ -265,6 +264,15 @@ h1 {
       }
     }
   }
+}
+
+.load {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  flex-flow: row wrap;
+  gap: 30px;
+
 }
 
 footer {
