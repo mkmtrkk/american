@@ -27,9 +27,8 @@
     <!-- メインループの記載 -->
      <section id="blog">
         <h1>Latest Articles</h1>
-        <div class="blog-container">
+        <div class="blog-container" id="content">
             <div class="blog-box">
-                
             <?php   
             // サブクエリをセット
             // $args = array(
@@ -44,11 +43,12 @@
             //     'order' => 'DESC');    // 降順(日付の場合、日付が新しい順)
             
             // $loop = new WP_Query($args);  
+            
             if(have_posts()):
                 while (have_posts()):
                   the_post();
               ?>
-                <a href="<?php the_permalink(); ?>" class="blog-boxes">
+                <a href="<?php the_permalink(); ?>" class="blog-boxes" >
                     <?php the_post_thumbnail(); ?>
                     <!-- <img src="<?php //echo get_template_directory_uri();?>/img/post_img_1.png" alt=""> -->
                     <div class="blog-boxes-p">
@@ -63,7 +63,7 @@
                     <section class="blog-boxes">
                     <h2 class="subtitle">表示する記事がありません</h2>
                     </section>
-                <?php endif; ?>    
+                <?php endif;?>    
                 <!-- <div class="blog-boxes">
                     <img src="<?php //echo get_template_directory_uri();?>/img/post_img_2.png" alt="">
                     <div class="blog-boxes-p">

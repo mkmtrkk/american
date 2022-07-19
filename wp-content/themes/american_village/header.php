@@ -13,19 +13,25 @@
 </head>
 <body>
 
-<header>
+<header class=".header">
      <!-- ヘッダーライト -->
-     <div class="header-right">
-       <ul>
-        <li><a href="">Menu01</a></li>
-        <li><a href="">Menu02</a></li>
-        <li><a href="">Menu03</a></li>
-        <li><a href="">Menu04</a></li>
-       </ul>
-     </div>
+        <div class="header-right">
+                <p id="hamburger-btn" class="hamburger">
+                    <span></span>
+                </p>
+                <nav>
+                    <ul>
+                        <li><a href="">Menu01</a></li>
+                        <li><a href="">Menu02</a></li>
+                        <li><a href="">Menu03</a></li>
+                        <li><a href="">Menu04</a></li>
+                    </ul>
+                </nav>  
+        
+        </div>
      <!-- ハンバーガーメニュー -->
-     <input type="checkbox" id="hamburger">
+     <!-- <input type="checkbox" id="hamburger">
      <label for="hamburger" class="hamburger">
        <span class="pate"></span>
-     </label>
+     </label> -->
 </header>
