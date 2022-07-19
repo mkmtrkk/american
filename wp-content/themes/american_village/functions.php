@@ -54,6 +54,7 @@ function my_ajax(){
     echo the_post_thumbnail();
 	echo '<div class="blog-boxes-p">';
 	echo '<p class="day">'.get_the_date().'</p>';
+    echo '<h2 class="title">'.the_title().'</h2>';
 	echo '<p class="description">'.the_content().'</p>';
     echo '<p class="more">'.'READ MORE'.'</p>';
     echo '</div>';

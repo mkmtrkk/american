@@ -196,7 +196,7 @@ h1 {
   right: 17px;
   position: absolute;
   font-size: 13px;
-  bottom: 15px;
+  bottom: 25px;
 }
 
 @media screen and (max-width: 767px) {
@@ -213,7 +213,7 @@ h1 {
   height: 2px;
   background-color: black;
   position: absolute;
-  bottom: -5px;
+  bottom: -9px;
   right: 0px;
   transition: 0.5s;
 }
@@ -224,7 +224,7 @@ h1 {
 }
 
 #blog .blog-boxes:hover .more::after {
-  width: 80px;
+  width: 77px;
 }
 
 .load {
