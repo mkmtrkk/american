@@ -1,7 +1,117 @@
 @charset "UTF-8";
 body {
-  background-color: white;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header .hamburger {
+    position: relative;
+    width: 28px;
+    height: 30px;
+    margin: 30px auto 10px;
+    margin-right: 10px;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header .hamburger span:after,
+  .header .hamburger span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -9px;
+  }
+}
+
+.header .hamburger span:after {
+  top: 9px;
+}
+
+.header .hamburger span {
+  position: relative;
+  display: block;
+  top: 15px;
+}
+
+.header .hamburger span,
+.header .hamburger span:after,
+.header .hamburger span:before {
+  width: 100%;
+  height: 5px;
+  background-color: red;
+  transition: all 0.5s;
+  /*←アニメーション*/
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.header .hamburger.on span {
+  background-color: transparent;
+}
+
+.header .hamburger.on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header .hamburger.on span:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+  ul li {
+    color: white;
+    font-size: 12px;
+    line-height: 0;
+    padding: 18px 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  ul {
+    display: block;
+    background-color: #173d7e;
+    width: 28%;
+    text-align: center;
+    padding: 150px 0;
+    position: absolute;
+    right: -222px;
+    z-index: 2;
+    transition: all 1s ease;
+  }
+  ul.hide {
+    z-index: 2;
+    right: 0;
+  }
+}
+
+li {
+  padding: 10px 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 63px;
+  color: #000000;
+}
+
+@media screen and (max-width: 767px) {
+  li {
+    padding: 0;
+  }
 }
 
 main {
@@ -37,9 +147,10 @@ h1 {
 
 #blog .blog-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 100px;
   flex-flow: row wrap;
+  gap: 30px;
 }
 
 @media screen and (max-width: 767px) {
@@ -116,6 +227,14 @@ h1 {
   width: 80px;
 }
 
+.load {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  flex-flow: row wrap;
+  gap: 30px;
+}
+
 footer {
   text-align: center;
   color: white;
@@ -127,54 +246,6 @@ footer {
 @media screen and (max-width: 767px) {
   footer {
     font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .hamburger {
-    width: 30px;
-    height: 30px;
-    display: block;
-    cursor: pointer;
-  }
-  .hamburger .pate,
-  .hamburger .pate::before,
-  .hamburger .pate::after {
-    width: 100%;
-    height: 5px;
-    display: block;
-    background-color: grey;
-    border-radius: 2px;
-    transition: all .5s ease;
-  }
-  .hamburger .pate {
-    position: relative;
-    top: calc(50% - 2px);
-  }
-  .hamburger .pate::before, .hamburger .pate::after {
-    position: absolute;
-    content: '';
-  }
-  .hamburger .pate::before {
-    top: -9px;
-  }
-  .hamburger .pate::after {
-    top: 9px;
-  }
-  #hamburger {
-    display: none;
-  }
-  #hamburger:checked + .hamburger .pate {
-    background-color: transparent;
-  }
-  #hamburger:checked + .hamburger .pate::before {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  #hamburger:checked + .hamburger .pate::after {
-    transform: rotate(-45deg) translate(7px, -8px);
-  }
-  #hamburger:checked + .hamburger .pate ~ .header-right {
-    right: 0;
   }
 }
 /*# sourceMappingURL=rika.css.map */

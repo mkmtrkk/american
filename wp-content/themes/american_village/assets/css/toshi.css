@@ -1,9 +1,10 @@
 header {
-  height: 260px;
+  height: 160px;
   background-color: white;
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -48,9 +49,9 @@ header input {
 .kv-container .kv-text {
   position: absolute;
   height: 100%;
-  width: 50%;
-  top: 40%;
-  left: 50%;
+  width: 100%;
+  top: 235px;
+  left: 325px;
 }
 
 @media screen and (max-width: 767px) {
