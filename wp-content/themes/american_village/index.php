@@ -17,9 +17,9 @@
                 <img class="kv-text-sp" src="<?php echo get_template_directory_uri(); ?>/img/visual_text_sp.png" alt="view"/>
             </picture>
         </div>    
-    <h3>
-        <span>進化し続ける「街」</span><span>アメリカンビレッジマガジン</span>
-    </h3> 
+        <h3>
+            <span>進化し続ける「街」</span><span>アメリカンビレッジマガジン</span>
+        </h3> 
 
     </section>
 
@@ -46,7 +46,7 @@
                     <!-- <img src="<?php //echo get_template_directory_uri();?>/img/post_img_1.png" alt=""> -->
                     <div class="blog-boxes-p">
                         <p class="day"><?php echo get_the_date(); ?></p>
-                        <!-- <h2 class="title"><?php //the_title(); ?></h2> -->
+                        <h2 class="title"><?php the_title(); ?></h2>
                         <p class="description"><?php the_content(); ?></p>
                         <p class="more">READ MORE</p>
                     </div>
@@ -64,7 +64,7 @@
 
                     <!-- 初期表示件数が全件数より少ない場合、もっと読み込むボタンを表示 -->
                     <?php if($count > 6): ?>
-                    <button class="more_btn">もっと読み込む</button>
+                    <button class="more_btn">もっと見る</button>
                     <?php endif; ?>
                 <?php endif;?>    
                 

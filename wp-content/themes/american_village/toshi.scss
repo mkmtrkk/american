@@ -5,27 +5,50 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   input {
     display: none;
   }
+=======
+
+  input {
+    display: none;
+  }
+
+>>>>>>> 13c8e438fb5ea4640a693a133b2fd415fa43ea7d
   ul {
     display: flex;
     list-style: none;
     position: relative;
     top: 85px;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 13c8e438fb5ea4640a693a133b2fd415fa43ea7d
   li {
     margin-right: 20px;
   }
 }
+<<<<<<< HEAD
 #kv {
   position: relative;
+=======
+
+#kv {
+  position: relative;
+
+>>>>>>> 13c8e438fb5ea4640a693a133b2fd415fa43ea7d
   .kv-logo {
     position: absolute;
     top: -110px;
     left: 10px;
     z-index: 2;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 13c8e438fb5ea4640a693a133b2fd415fa43ea7d
   h3 {
     margin-left: 20px;
     position: relative;
@@ -40,12 +63,24 @@ header {
 //     margin-right: 20px;
 //   }
 // }
+<<<<<<< HEAD
 .kv-container {
   text-align: center;
   position: relative;
   .kv-slide {
     text-align: center;
   }
+=======
+
+.kv-container {
+  text-align: center;
+  position: relative;
+
+  .kv-slide {
+    text-align: center;
+  }
+
+>>>>>>> 13c8e438fb5ea4640a693a133b2fd415fa43ea7d
   .kv-text {
     position: absolute;
     height: 100%;
@@ -59,34 +94,65 @@ header {
   main {
     width: 100%;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 13c8e438fb5ea4640a693a133b2fd415fa43ea7d
   header {
     // height: 0px;
     // overflow: hidden;
     width: 100%;
     position: absolute;
     transition: right 1s ease;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 13c8e438fb5ea4640a693a133b2fd415fa43ea7d
     ul {
       display: block;
       background-color: aqua;
     }
   }
+<<<<<<< HEAD
   #kv {
     // margin-top: 30px;
     text-align: center;
+=======
+
+
+  #kv {
+    // margin-top: 30px;
+    text-align: center;
+
+>>>>>>> 13c8e438fb5ea4640a693a133b2fd415fa43ea7d
     .kv-logo {
       position: static;
       width: 30%;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 13c8e438fb5ea4640a693a133b2fd415fa43ea7d
     h3 {
       span {
         display: block;
       }
     }
   }
+<<<<<<< HEAD
   .kv-container {
     position: static;
     .kv-text {
       position: static;
+=======
+
+  .kv-container {
+    position: static;
+
+    .kv-text {
+      position: static;
+
+>>>>>>> 13c8e438fb5ea4640a693a133b2fd415fa43ea7d
       position: absolute;
       width: 70%;
       height: auto;
@@ -95,6 +161,7 @@ header {
     }
   }
   // レスポンシブの大外
+<<<<<<< HEAD
 }
 
 
@@ -102,3 +169,6 @@ header {
 
 
 
+=======
+}
+>>>>>>> 13c8e438fb5ea4640a693a133b2fd415fa43ea7d
