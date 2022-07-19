@@ -17,9 +17,9 @@
                 <img class="kv-text-sp" src="<?php echo get_template_directory_uri(); ?>/img/visual_text_sp.png" alt="view"/>
             </picture>
         </div>    
-    <h3>
-        <span>進化し続ける「街」</span><span>アメリカンビレッジマガジン</span>
-    </h3> 
+        <h3>
+            <span>進化し続ける「街」</span><span>アメリカンビレッジマガジン</span>
+        </h3> 
 
     </section>
 
