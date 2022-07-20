@@ -1,5 +1,5 @@
 header {
-  height: 260px;
+  height: 170px;
   background-color: white;
   padding-top: 20px;
   display: flex;
@@ -20,7 +20,12 @@ header {
     display: flex;
     list-style: none;
     position: relative;
+<<<<<<< HEAD
     top: 85px;
+=======
+    top: 10px;
+    right: 5%;
+>>>>>>> 951200460475f194bff138a391394a2b370680df
   }
 <<<<<<< HEAD
 =======
@@ -110,7 +115,7 @@ header {
 >>>>>>> 13c8e438fb5ea4640a693a133b2fd415fa43ea7d
     ul {
       display: block;
-      background-color: aqua;
+      background-color: rgb(255, 255, 255);
     }
   }
 <<<<<<< HEAD

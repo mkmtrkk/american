@@ -12,8 +12,22 @@ header {
     display: flex;
     list-style: none;
     position: relative;
-    top: 10px;
-    right: 5%;
+
+    display: block;
+    top: 15px;
+  }
+
+  .hamburger span,
+  .hamburger span:after,
+  .hamburger span:before {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    transition: all 0.5s;
+    /*←アニメーション*/
+    backface-visibility: hidden;
+    border-radius: 2px;
+
   }
   li {
     margin-right: 20px;
@@ -41,18 +55,54 @@ header {
 //     margin-right: 20px;
 //   }
 // }
-.kv-container {
-  text-align: center;
-  position: relative;
-  .kv-slide {
-    text-align: center;
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+
+
+  li {
+    @include sp-screen {
+      color: black;
+      font-size: 12px;
+      line-height: 0;
+      padding: 18px 20px;
+    }
   }
-  .kv-text {
+
+  @include sp-screen {
+    display: block;
+    background-color: #173d7e;
+    width: 28%;
+    text-align: center;
+    // padding: 150px 0;
     position: absolute;
-    height: 100%;
-    width: 50%;
-    top: 40%;
-    left: 50%;
+    right: -222px;
+    // position: fixed;
+    z-index: 2;
+
+    &.hide {
+      z-index: 2;
+      right: 0;
+
+    }
+
+    // transform: translateX(0);
+    transition: all 1s ease;
+  }
+}
+
+
+li {
+  padding: 10px 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 63px;
+  color: #000000;
+
+  @include sp-screen {
+    padding: 0;
   }
 }
 // レスポンシブ対応
